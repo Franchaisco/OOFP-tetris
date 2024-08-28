@@ -135,6 +135,6 @@ To get the full 1.0 point, you need to:
 * Use a var only to keep track of the current game state
 CHANGE FROM SNAKE: You are NOT allowed to locally use vars and builders inside functions to get the immutability bonus. 
 
- Code style is judged as described in the readable code lectures and the
-[code style grading guidelines](https://canvas.vu.nl/courses/71445/pages/code-style).
+Code style is judged as described in the readable code lectures and the
+ [code style grading guideline](https://canvas.vu.nl/courses/78072/pages/code-style). The maximum style grade you can get depends on how much of the previous 8 points you got. For example, if you get 5 points from the tests, did not make your gamestate immutable (0/1), did get the points for map/filter & exists (0.75), and did get the points for rotation using subclasses (0.75). then your maximum style points is (6.5/8) * 2 = 1,625 point.
 
