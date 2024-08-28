@@ -6,7 +6,7 @@ plugins {
 
 
  application {
-   mainClass.set("sokoban.game.SokobanGame")
+   mainClass.set("tetris.game.TetrisGame")
  }
  
 
