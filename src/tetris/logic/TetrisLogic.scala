@@ -41,6 +41,8 @@ class TetrisLogic(val randomGen: RandomGenerator,
 
   // TODO implement me
   def getCellType(p : Point): CellType = Empty
+
+
 }
 
 object TetrisLogic {
