@@ -18,6 +18,14 @@ class TetrisLogic(val randomGen: RandomGenerator,
   def this() =
     this(new ScalaRandomGen(), DefaultDims, makeEmptyBoard(DefaultDims))
 
+  private val initialTetromino : Tetromino = TetrominoI()
+  private val initialFrame : Frame = Frame(initialTetromino, initialTetromino.tetroParts)
+  var frameList : List[Frame] = List[Frame](initialFrame)
+
+  def setCurFrame() : Frame = {
+    frameList.head
+  }
+
   // TODO implement me
   def rotateLeft(): Unit = ()
 
@@ -30,8 +38,22 @@ class TetrisLogic(val randomGen: RandomGenerator,
   // TODO implement me
   def moveRight(): Unit = ()
 
+//  def createNewParts(tetroParts : List[Point]) : List[Point] = {
+//      for(i <- tetroParts){
+//          newTetroParts = Point(i.x, i.y + 1) :: newTetroParts
+//        }
+//      }
+
   // TODO implement me
-  def moveDown(): Unit = ()
+  def moveDown(): Unit = {
+    val curFrame = setCurFrame()
+    var newTetroParts = List[Point]() //make setFunction createNewParts(curframe.tetroParts)
+    for(i <- curFrame.tetroParts){
+      newTetroParts = Point(i.x, i.y + 1) :: newTetroParts
+    }
+    val newFrame = Frame(curFrame.curTetromino, newTetroParts)
+    frameList = newFrame :: frameList
+  }
 
   // TODO implement me
   def doHardDrop(): Unit = ()
@@ -40,12 +62,24 @@ class TetrisLogic(val randomGen: RandomGenerator,
   def isGameOver: Boolean = false
 
   // TODO implement me
-  def getCellType(p : Point): CellType = Empty
+  def getCellType(p : Point): CellType =
+  {
+    if(setCurFrame().tetroParts.contains(p))
+      {
+          setCurFrame().curTetromino match  {
+            case TetrominoI() => ICell
+        }
+      }
+    else
+      {
+        Empty
+      }
+  }
 
 
 }
 
-case class Frame()
+case class Frame(curTetromino : Tetromino, tetroParts : List[Point])
 {
 
 }
