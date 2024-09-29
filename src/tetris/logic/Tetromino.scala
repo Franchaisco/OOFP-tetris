@@ -2,14 +2,20 @@ package tetris.logic
 
 abstract class Tetromino
 {
-  def rotateLeft(): Unit.type = Unit
-  def rotateRight(): Unit.type = Unit
+  def rotateLeft(): Unit = ()
+  def rotateRight(): Unit = ()
+
+  def tetroParts: List[Point] = List[Point]()
+  def anchorPoint: Point = null
 }
 class RotateCentral() extends Tetromino
 class RotateI() extends Tetromino
 class RotateO() extends Tetromino
 
 case class TetrominoI() extends Tetromino
+{
+  override def tetroParts: List[Point] = List[Point](Point())
+}
 case class TetrominoJ() extends Tetromino
 case class TetrominoL() extends Tetromino
 case class TetrominoO() extends Tetromino

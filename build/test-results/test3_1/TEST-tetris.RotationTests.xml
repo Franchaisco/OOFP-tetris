@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tetris.RotationTests" tests="7" skipped="0" failures="7" errors="0" timestamp="2024-09-29T14:28:51" hostname="LAPTOP-68J58FIR" time="0.138">
+  <properties/>
+  <testcase name="testIRotations" classname="tetris.RotationTests" time="0.014">
+    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: Check Readme.md for how pieces should rotate&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=0, actions=&lt;&gt;&#10;Want | Got ✗&#10;------------&#10;.... | .... &#10;IIII | .... &#10;.... | .... &#10;.... | .... &#10;&#10;step=1, rand=0, actions=&lt;RotateRight&gt;&#10;Want | Got ✗&#10;------------&#10;..I. | .... &#10;..I. | .... &#10;..I. | .... &#10;..I. | .... &#10;&#10;step=2, rand=0, actions=&lt;RotateRight&gt;&#10;Want | Got ✗&#10;------------&#10;.... | .... &#10;.... | .... &#10;IIII | .... &#10;.... | .... &#10;&#10;step=3, rand=0, actions=&lt;RotateRight&gt;&#10;Want | Got ✗&#10;------------&#10;.I.. | .... &#10;.I.. | .... &#10;.I.. | .... &#10;.I.. | .... &#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
+Hint: Check Readme.md for how pieces should rotate
+--------------------------------------------------------------------------------
+This is what went wrong:
+
+step=0, rand=0, actions=&lt;&gt;
+Want | Got ✗
+------------
+.... | .... 
+IIII | .... 
+.... | .... 
+.... | .... 
+
+step=1, rand=0, actions=&lt;RotateRight&gt;
+Want | Got ✗
+------------
+..I. | .... 
+..I. | .... 
+..I. | .... 
+..I. | .... 
+
+step=2, rand=0, actions=&lt;RotateRight&gt;
+Want | Got ✗
+------------
+.... | .... 
+.... | .... 
+IIII | .... 
+.... | .... 
+
+step=3, rand=0, actions=&lt;RotateRight&gt;
+Want | Got ✗
+------------
+.I.. | .... 
+.I.. | .... 
+.I.. | .... 
+.I.. | .... 
+
+
+	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at app//org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at app//org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at app//org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at app//generic.GameTestSuite.checkGame(GameTestSuite.scala:298)
+	at app//tetris.TetrisTestSuiteBase.checkGame(TetrisTestSuiteBase.scala:103)
+	at app//tetris.RotationTests.$anonfun$new$1(RotationTests.scala:26)
+	at app//scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at app//infrastructure.TestBase.$anonfun$test$1(TestBase.scala:36)
+	at app//org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at app//org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at app//org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:22)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:20)
+	at app//org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at app//org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at app//org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+	at app//infrastructure.TestBase.org$scalatest$concurrent$TimeLimitedTests$$super$withFixture(TestBase.scala:9)
+	at app//org.scalatest.concurrent.TimeLimitedTests.$anonfun$withFixture$3(TimeLimitedTests.scala:154)
+	at app//org.scalatest.enablers.Timed$$anon$1.timeoutAfter(Timed.scala:127)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl(TimeLimits.scala:239)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl$(TimeLimits.scala:233)
+	at app//org.scalatest.concurrent.TimeLimits$.failAfterImpl(TimeLimits.scala:305)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture(TimeLimitedTests.scala:153)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture$(TimeLimitedTests.scala:150)
+	at app//infrastructure.TestBase.withFixture(TestBase.scala:9)
+	at app//org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at app//org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at app//org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at app//org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at app//org.scalatest.FunSuite.runTest(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at app//org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at app//scala.collection.immutable.List.foreach(List.scala:334)
+	at app//org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at app//org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at app//org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at app//org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at app//org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at app//org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at app//org.scalatest.Suite.run(Suite.scala:1124)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at app//org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at app//org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at app//org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at app//infrastructure.TestBase.run(TestBase.scala:26)
+	at app//org.scalatest.Suite.callExecuteOnSuite$1(Suite.scala:1187)
+	at app//org.scalatest.Suite.$anonfun$runNestedSuites$1(Suite.scala:1234)
+	at app//scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)
+	at app//org.scalatest.Suite.runNestedSuites(Suite.scala:1232)
+	at app//org.scalatest.Suite.runNestedSuites$(Suite.scala:1166)
+	at app//org.scalatest.Suites.runNestedSuites(Suites.scala:56)
+	at app//org.scalatest.Suite.run(Suite.scala:1121)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//tetris.TetrisTestSuitesBase.runDirect(TetrisTestSuitesBase.scala:20)
+	at app//tetris.TetrisTestSuitesBase.runWithScoreCounter(TetrisTestSuitesBase.scala:14)
+	at app//tetris.TetrisTestSuite3_1.run(TetrisTestSuite3_1.scala:17)
+	at app//org.scalatestplus.junit.JUnitRunner.run(JUnitRunner.scala:99)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+	at java.base@23/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@23/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="testJRotations" classname="tetris.RotationTests" time="0.011">
+    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: Check Readme.md for how pieces should rotate&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=1, actions=&lt;&gt;&#10;Want | Got ✗&#10;------------&#10;J..  | ...  &#10;JJJ  | ...  &#10;...  | ...  &#10;&#10;step=1, rand=1, actions=&lt;RotateRight&gt;&#10;Want | Got ✗&#10;------------&#10;.JJ  | ...  &#10;.J.  | ...  &#10;.J.  | ...  &#10;&#10;step=2, rand=0, actions=&lt;RotateRight&gt;&#10;Want | Got ✗&#10;------------&#10;...  | ...  &#10;JJJ  | ...  &#10;..J  | ...  &#10;&#10;step=3, rand=0, actions=&lt;RotateRight&gt;&#10;Want | Got ✗&#10;------------&#10;.J.  | ...  &#10;.J.  | ...  &#10;JJ.  | ...  &#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
+Hint: Check Readme.md for how pieces should rotate
+--------------------------------------------------------------------------------
+This is what went wrong:
+
+step=0, rand=1, actions=&lt;&gt;
+Want | Got ✗
+------------
+J..  | ...  
+JJJ  | ...  
+...  | ...  
+
+step=1, rand=1, actions=&lt;RotateRight&gt;
+Want | Got ✗
+------------
+.JJ  | ...  
+.J.  | ...  
+.J.  | ...  
+
+step=2, rand=0, actions=&lt;RotateRight&gt;
+Want | Got ✗
+------------
+...  | ...  
+JJJ  | ...  
+..J  | ...  
+
+step=3, rand=0, actions=&lt;RotateRight&gt;
+Want | Got ✗
+------------
+.J.  | ...  
+.J.  | ...  
+JJ.  | ...  
+
+
+	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at app//org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at app//org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at app//org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at app//generic.GameTestSuite.checkGame(GameTestSuite.scala:298)
+	at app//tetris.TetrisTestSuiteBase.checkGame(TetrisTestSuiteBase.scala:103)
+	at app//tetris.RotationTests.$anonfun$new$2(RotationTests.scala:47)
+	at app//scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at app//infrastructure.TestBase.$anonfun$test$1(TestBase.scala:36)
+	at app//org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at app//org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at app//org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:22)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:20)
+	at app//org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at app//org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at app//org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+	at app//infrastructure.TestBase.org$scalatest$concurrent$TimeLimitedTests$$super$withFixture(TestBase.scala:9)
+	at app//org.scalatest.concurrent.TimeLimitedTests.$anonfun$withFixture$3(TimeLimitedTests.scala:154)
+	at app//org.scalatest.enablers.Timed$$anon$1.timeoutAfter(Timed.scala:127)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl(TimeLimits.scala:239)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl$(TimeLimits.scala:233)
+	at app//org.scalatest.concurrent.TimeLimits$.failAfterImpl(TimeLimits.scala:305)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture(TimeLimitedTests.scala:153)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture$(TimeLimitedTests.scala:150)
+	at app//infrastructure.TestBase.withFixture(TestBase.scala:9)
+	at app//org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at app//org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at app//org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at app//org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at app//org.scalatest.FunSuite.runTest(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at app//org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at app//scala.collection.immutable.List.foreach(List.scala:334)
+	at app//org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at app//org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at app//org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at app//org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at app//org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at app//org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at app//org.scalatest.Suite.run(Suite.scala:1124)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at app//org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at app//org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at app//org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at app//infrastructure.TestBase.run(TestBase.scala:26)
+	at app//org.scalatest.Suite.callExecuteOnSuite$1(Suite.scala:1187)
+	at app//org.scalatest.Suite.$anonfun$runNestedSuites$1(Suite.scala:1234)
+	at app//scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)
+	at app//org.scalatest.Suite.runNestedSuites(Suite.scala:1232)
+	at app//org.scalatest.Suite.runNestedSuites$(Suite.scala:1166)
+	at app//org.scalatest.Suites.runNestedSuites(Suites.scala:56)
+	at app//org.scalatest.Suite.run(Suite.scala:1121)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//tetris.TetrisTestSuitesBase.runDirect(TetrisTestSuitesBase.scala:20)
+	at app//tetris.TetrisTestSuitesBase.runWithScoreCounter(TetrisTestSuitesBase.scala:14)
+	at app//tetris.TetrisTestSuite3_1.run(TetrisTestSuite3_1.scala:17)
+	at app//org.scalatestplus.junit.JUnitRunner.run(JUnitRunner.scala:99)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+	at java.base@23/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@23/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="testLRotations" classname="tetris.RotationTests" time="0.016">
+    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: Check Readme.md for how pieces should rotate&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=2, actions=&lt;&gt;&#10;Want | Got ✗&#10;------------&#10;..L  | ...  &#10;LLL  | ...  &#10;...  | ...  &#10;&#10;step=1, rand=1, actions=&lt;RotateRight&gt;&#10;Want | Got ✗&#10;------------&#10;.L.  | ...  &#10;.L.  | ...  &#10;.LL  | ...  &#10;&#10;step=2, rand=0, actions=&lt;RotateRight&gt;&#10;Want | Got ✗&#10;------------&#10;...  | ...  &#10;LLL  | ...  &#10;L..  | ...  &#10;&#10;step=3, rand=0, actions=&lt;RotateRight&gt;&#10;Want | Got ✗&#10;------------&#10;LL.  | ...  &#10;.L.  | ...  &#10;.L.  | ...  &#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
+Hint: Check Readme.md for how pieces should rotate
+--------------------------------------------------------------------------------
+This is what went wrong:
+
+step=0, rand=2, actions=&lt;&gt;
+Want | Got ✗
+------------
+..L  | ...  
+LLL  | ...  
+...  | ...  
+
+step=1, rand=1, actions=&lt;RotateRight&gt;
+Want | Got ✗
+------------
+.L.  | ...  
+.L.  | ...  
+.LL  | ...  
+
+step=2, rand=0, actions=&lt;RotateRight&gt;
+Want | Got ✗
+------------
+...  | ...  
+LLL  | ...  
+L..  | ...  
+
+step=3, rand=0, actions=&lt;RotateRight&gt;
+Want | Got ✗
+------------
+LL.  | ...  
+.L.  | ...  
+.L.  | ...  
+
+
+	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at app//org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at app//org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at app//org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at app//generic.GameTestSuite.checkGame(GameTestSuite.scala:298)
+	at app//tetris.TetrisTestSuiteBase.checkGame(TetrisTestSuiteBase.scala:103)
+	at app//tetris.RotationTests.$anonfun$new$3(RotationTests.scala:68)
+	at app//scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at app//infrastructure.TestBase.$anonfun$test$1(TestBase.scala:36)
+	at app//org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at app//org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at app//org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:22)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:20)
+	at app//org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at app//org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at app//org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+	at app//infrastructure.TestBase.org$scalatest$concurrent$TimeLimitedTests$$super$withFixture(TestBase.scala:9)
+	at app//org.scalatest.concurrent.TimeLimitedTests.$anonfun$withFixture$3(TimeLimitedTests.scala:154)
+	at app//org.scalatest.enablers.Timed$$anon$1.timeoutAfter(Timed.scala:127)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl(TimeLimits.scala:239)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl$(TimeLimits.scala:233)
+	at app//org.scalatest.concurrent.TimeLimits$.failAfterImpl(TimeLimits.scala:305)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture(TimeLimitedTests.scala:153)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture$(TimeLimitedTests.scala:150)
+	at app//infrastructure.TestBase.withFixture(TestBase.scala:9)
+	at app//org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at app//org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at app//org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at app//org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at app//org.scalatest.FunSuite.runTest(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at app//org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at app//scala.collection.immutable.List.foreach(List.scala:334)
+	at app//org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at app//org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at app//org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at app//org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at app//org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at app//org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at app//org.scalatest.Suite.run(Suite.scala:1124)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at app//org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at app//org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at app//org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at app//infrastructure.TestBase.run(TestBase.scala:26)
+	at app//org.scalatest.Suite.callExecuteOnSuite$1(Suite.scala:1187)
+	at app//org.scalatest.Suite.$anonfun$runNestedSuites$1(Suite.scala:1234)
+	at app//scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)
+	at app//org.scalatest.Suite.runNestedSuites(Suite.scala:1232)
+	at app//org.scalatest.Suite.runNestedSuites$(Suite.scala:1166)
+	at app//org.scalatest.Suites.runNestedSuites(Suites.scala:56)
+	at app//org.scalatest.Suite.run(Suite.scala:1121)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//tetris.TetrisTestSuitesBase.runDirect(TetrisTestSuitesBase.scala:20)
+	at app//tetris.TetrisTestSuitesBase.runWithScoreCounter(TetrisTestSuitesBase.scala:14)
+	at app//tetris.TetrisTestSuite3_1.run(TetrisTestSuite3_1.scala:17)
+	at app//org.scalatestplus.junit.JUnitRunner.run(JUnitRunner.scala:99)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+	at java.base@23/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@23/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="testORotations" classname="tetris.RotationTests" time="0.036">
+    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: Check Readme.md for how pieces should rotate&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=3, actions=&lt;&gt;&#10;Want    | Got ✗  &#10;-----------------&#10;...OO.. | .......&#10;...OO.. | .......&#10;....... | .......&#10;&#10;step=1, rand=3, actions=&lt;RotateRight&gt;&#10;Want    | Got ✗  &#10;-----------------&#10;...OO.. | .......&#10;...OO.. | .......&#10;....... | .......&#10;&#10;step=2, rand=3, actions=&lt;RotateRight&gt;&#10;Want    | Got ✗  &#10;-----------------&#10;...OO.. | .......&#10;...OO.. | .......&#10;....... | .......&#10;&#10;step=3, rand=3, actions=&lt;RotateRight&gt;&#10;Want    | Got ✗  &#10;-----------------&#10;...OO.. | .......&#10;...OO.. | .......&#10;....... | .......&#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
+Hint: Check Readme.md for how pieces should rotate
+--------------------------------------------------------------------------------
+This is what went wrong:
+
+step=0, rand=3, actions=&lt;&gt;
+Want    | Got ✗  
+-----------------
+...OO.. | .......
+...OO.. | .......
+....... | .......
+
+step=1, rand=3, actions=&lt;RotateRight&gt;
+Want    | Got ✗  
+-----------------
+...OO.. | .......
+...OO.. | .......
+....... | .......
+
+step=2, rand=3, actions=&lt;RotateRight&gt;
+Want    | Got ✗  
+-----------------
+...OO.. | .......
+...OO.. | .......
+....... | .......
+
+step=3, rand=3, actions=&lt;RotateRight&gt;
+Want    | Got ✗  
+-----------------
+...OO.. | .......
+...OO.. | .......
+....... | .......
+
+
+	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at app//org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at app//org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at app//org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at app//generic.GameTestSuite.checkGame(GameTestSuite.scala:298)
+	at app//tetris.TetrisTestSuiteBase.checkGame(TetrisTestSuiteBase.scala:103)
+	at app//tetris.RotationTests.$anonfun$new$4(RotationTests.scala:89)
+	at app//scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at app//infrastructure.TestBase.$anonfun$test$1(TestBase.scala:36)
+	at app//org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at app//org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at app//org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:22)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:20)
+	at app//org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at app//org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at app//org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+	at app//infrastructure.TestBase.org$scalatest$concurrent$TimeLimitedTests$$super$withFixture(TestBase.scala:9)
+	at app//org.scalatest.concurrent.TimeLimitedTests.$anonfun$withFixture$3(TimeLimitedTests.scala:154)
+	at app//org.scalatest.enablers.Timed$$anon$1.timeoutAfter(Timed.scala:127)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl(TimeLimits.scala:239)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl$(TimeLimits.scala:233)
+	at app//org.scalatest.concurrent.TimeLimits$.failAfterImpl(TimeLimits.scala:305)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture(TimeLimitedTests.scala:153)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture$(TimeLimitedTests.scala:150)
+	at app//infrastructure.TestBase.withFixture(TestBase.scala:9)
+	at app//org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at app//org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at app//org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at app//org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at app//org.scalatest.FunSuite.runTest(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at app//org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at app//scala.collection.immutable.List.foreach(List.scala:334)
+	at app//org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at app//org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at app//org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at app//org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at app//org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at app//org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at app//org.scalatest.Suite.run(Suite.scala:1124)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at app//org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at app//org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at app//org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at app//infrastructure.TestBase.run(TestBase.scala:26)
+	at app//org.scalatest.Suite.callExecuteOnSuite$1(Suite.scala:1187)
+	at app//org.scalatest.Suite.$anonfun$runNestedSuites$1(Suite.scala:1234)
+	at app//scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)
+	at app//org.scalatest.Suite.runNestedSuites(Suite.scala:1232)
+	at app//org.scalatest.Suite.runNestedSuites$(Suite.scala:1166)
+	at app//org.scalatest.Suites.runNestedSuites(Suites.scala:56)
+	at app//org.scalatest.Suite.run(Suite.scala:1121)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//tetris.TetrisTestSuitesBase.runDirect(TetrisTestSuitesBase.scala:20)
+	at app//tetris.TetrisTestSuitesBase.runWithScoreCounter(TetrisTestSuitesBase.scala:14)
+	at app//tetris.TetrisTestSuite3_1.run(TetrisTestSuite3_1.scala:17)
+	at app//org.scalatestplus.junit.JUnitRunner.run(JUnitRunner.scala:99)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+	at java.base@23/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@23/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="testSRotations" classname="tetris.RotationTests" time="0.007">
+    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: Check Readme.md for how pieces should rotate&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=4, actions=&lt;&gt;&#10;Want | Got ✗&#10;------------&#10;.SS  | ...  &#10;SS.  | ...  &#10;...  | ...  &#10;&#10;step=1, rand=1, actions=&lt;RotateRight&gt;&#10;Want | Got ✗&#10;------------&#10;.S.  | ...  &#10;.SS  | ...  &#10;..S  | ...  &#10;&#10;step=2, rand=0, actions=&lt;RotateRight&gt;&#10;Want | Got ✗&#10;------------&#10;...  | ...  &#10;.SS  | ...  &#10;SS.  | ...  &#10;&#10;step=3, rand=0, actions=&lt;RotateRight&gt;&#10;Want | Got ✗&#10;------------&#10;S..  | ...  &#10;SS.  | ...  &#10;.S.  | ...  &#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
+Hint: Check Readme.md for how pieces should rotate
+--------------------------------------------------------------------------------
+This is what went wrong:
+
+step=0, rand=4, actions=&lt;&gt;
+Want | Got ✗
+------------
+.SS  | ...  
+SS.  | ...  
+...  | ...  
+
+step=1, rand=1, actions=&lt;RotateRight&gt;
+Want | Got ✗
+------------
+.S.  | ...  
+.SS  | ...  
+..S  | ...  
+
+step=2, rand=0, actions=&lt;RotateRight&gt;
+Want | Got ✗
+------------
+...  | ...  
+.SS  | ...  
+SS.  | ...  
+
+step=3, rand=0, actions=&lt;RotateRight&gt;
+Want | Got ✗
+------------
+S..  | ...  
+SS.  | ...  
+.S.  | ...  
+
+
+	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at app//org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at app//org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at app//org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at app//generic.GameTestSuite.checkGame(GameTestSuite.scala:298)
+	at app//tetris.TetrisTestSuiteBase.checkGame(TetrisTestSuiteBase.scala:103)
+	at app//tetris.RotationTests.$anonfun$new$5(RotationTests.scala:110)
+	at app//scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at app//infrastructure.TestBase.$anonfun$test$1(TestBase.scala:36)
+	at app//org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at app//org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at app//org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:22)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:20)
+	at app//org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at app//org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at app//org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+	at app//infrastructure.TestBase.org$scalatest$concurrent$TimeLimitedTests$$super$withFixture(TestBase.scala:9)
+	at app//org.scalatest.concurrent.TimeLimitedTests.$anonfun$withFixture$3(TimeLimitedTests.scala:154)
+	at app//org.scalatest.enablers.Timed$$anon$1.timeoutAfter(Timed.scala:127)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl(TimeLimits.scala:239)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl$(TimeLimits.scala:233)
+	at app//org.scalatest.concurrent.TimeLimits$.failAfterImpl(TimeLimits.scala:305)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture(TimeLimitedTests.scala:153)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture$(TimeLimitedTests.scala:150)
+	at app//infrastructure.TestBase.withFixture(TestBase.scala:9)
+	at app//org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at app//org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at app//org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at app//org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at app//org.scalatest.FunSuite.runTest(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at app//org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at app//scala.collection.immutable.List.foreach(List.scala:334)
+	at app//org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at app//org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at app//org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at app//org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at app//org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at app//org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at app//org.scalatest.Suite.run(Suite.scala:1124)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at app//org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at app//org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at app//org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at app//infrastructure.TestBase.run(TestBase.scala:26)
+	at app//org.scalatest.Suite.callExecuteOnSuite$1(Suite.scala:1187)
+	at app//org.scalatest.Suite.$anonfun$runNestedSuites$1(Suite.scala:1234)
+	at app//scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)
+	at app//org.scalatest.Suite.runNestedSuites(Suite.scala:1232)
+	at app//org.scalatest.Suite.runNestedSuites$(Suite.scala:1166)
+	at app//org.scalatest.Suites.runNestedSuites(Suites.scala:56)
+	at app//org.scalatest.Suite.run(Suite.scala:1121)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//tetris.TetrisTestSuitesBase.runDirect(TetrisTestSuitesBase.scala:20)
+	at app//tetris.TetrisTestSuitesBase.runWithScoreCounter(TetrisTestSuitesBase.scala:14)
+	at app//tetris.TetrisTestSuite3_1.run(TetrisTestSuite3_1.scala:17)
+	at app//org.scalatestplus.junit.JUnitRunner.run(JUnitRunner.scala:99)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+	at java.base@23/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@23/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="testTRotations" classname="tetris.RotationTests" time="0.03">
+    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: Check Readme.md for how pieces should rotate&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=5, actions=&lt;&gt;&#10;Want | Got ✗&#10;------------&#10;.T.  | ...  &#10;TTT  | ...  &#10;...  | ...  &#10;&#10;step=1, rand=1, actions=&lt;RotateRight&gt;&#10;Want | Got ✗&#10;------------&#10;.T.  | ...  &#10;.TT  | ...  &#10;.T.  | ...  &#10;&#10;step=2, rand=0, actions=&lt;RotateRight&gt;&#10;Want | Got ✗&#10;------------&#10;...  | ...  &#10;TTT  | ...  &#10;.T.  | ...  &#10;&#10;step=3, rand=0, actions=&lt;RotateRight&gt;&#10;Want | Got ✗&#10;------------&#10;.T.  | ...  &#10;TT.  | ...  &#10;.T.  | ...  &#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
+Hint: Check Readme.md for how pieces should rotate
+--------------------------------------------------------------------------------
+This is what went wrong:
+
+step=0, rand=5, actions=&lt;&gt;
+Want | Got ✗
+------------
+.T.  | ...  
+TTT  | ...  
+...  | ...  
+
+step=1, rand=1, actions=&lt;RotateRight&gt;
+Want | Got ✗
+------------
+.T.  | ...  
+.TT  | ...  
+.T.  | ...  
+
+step=2, rand=0, actions=&lt;RotateRight&gt;
+Want | Got ✗
+------------
+...  | ...  
+TTT  | ...  
+.T.  | ...  
+
+step=3, rand=0, actions=&lt;RotateRight&gt;
+Want | Got ✗
+------------
+.T.  | ...  
+TT.  | ...  
+.T.  | ...  
+
+
+	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at app//org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at app//org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at app//org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at app//generic.GameTestSuite.checkGame(GameTestSuite.scala:298)
+	at app//tetris.TetrisTestSuiteBase.checkGame(TetrisTestSuiteBase.scala:103)
+	at app//tetris.RotationTests.$anonfun$new$6(RotationTests.scala:131)
+	at app//scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at app//infrastructure.TestBase.$anonfun$test$1(TestBase.scala:36)
+	at app//org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at app//org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at app//org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:22)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:20)
+	at app//org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at app//org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at app//org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+	at app//infrastructure.TestBase.org$scalatest$concurrent$TimeLimitedTests$$super$withFixture(TestBase.scala:9)
+	at app//org.scalatest.concurrent.TimeLimitedTests.$anonfun$withFixture$3(TimeLimitedTests.scala:154)
+	at app//org.scalatest.enablers.Timed$$anon$1.timeoutAfter(Timed.scala:127)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl(TimeLimits.scala:239)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl$(TimeLimits.scala:233)
+	at app//org.scalatest.concurrent.TimeLimits$.failAfterImpl(TimeLimits.scala:305)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture(TimeLimitedTests.scala:153)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture$(TimeLimitedTests.scala:150)
+	at app//infrastructure.TestBase.withFixture(TestBase.scala:9)
+	at app//org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at app//org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at app//org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at app//org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at app//org.scalatest.FunSuite.runTest(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at app//org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at app//scala.collection.immutable.List.foreach(List.scala:334)
+	at app//org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at app//org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at app//org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at app//org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at app//org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at app//org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at app//org.scalatest.Suite.run(Suite.scala:1124)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at app//org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at app//org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at app//org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at app//infrastructure.TestBase.run(TestBase.scala:26)
+	at app//org.scalatest.Suite.callExecuteOnSuite$1(Suite.scala:1187)
+	at app//org.scalatest.Suite.$anonfun$runNestedSuites$1(Suite.scala:1234)
+	at app//scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)
+	at app//org.scalatest.Suite.runNestedSuites(Suite.scala:1232)
+	at app//org.scalatest.Suite.runNestedSuites$(Suite.scala:1166)
+	at app//org.scalatest.Suites.runNestedSuites(Suites.scala:56)
+	at app//org.scalatest.Suite.run(Suite.scala:1121)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//tetris.TetrisTestSuitesBase.runDirect(TetrisTestSuitesBase.scala:20)
+	at app//tetris.TetrisTestSuitesBase.runWithScoreCounter(TetrisTestSuitesBase.scala:14)
+	at app//tetris.TetrisTestSuite3_1.run(TetrisTestSuite3_1.scala:17)
+	at app//org.scalatestplus.junit.JUnitRunner.run(JUnitRunner.scala:99)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+	at java.base@23/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@23/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="testZRotations" classname="tetris.RotationTests" time="0.007">
+    <failure message="org.scalatest.exceptions.TestFailedException: didPass was false&#10;Hint: Check Readme.md for how pieces should rotate&#10;--------------------------------------------------------------------------------&#10;This is what went wrong:&#10;&#10;step=0, rand=6, actions=&lt;&gt;&#10;Want | Got ✗&#10;------------&#10;ZZ.  | ...  &#10;.ZZ  | ...  &#10;...  | ...  &#10;&#10;step=1, rand=1, actions=&lt;RotateRight&gt;&#10;Want | Got ✗&#10;------------&#10;..Z  | ...  &#10;.ZZ  | ...  &#10;.Z.  | ...  &#10;&#10;step=2, rand=0, actions=&lt;RotateRight&gt;&#10;Want | Got ✗&#10;------------&#10;...  | ...  &#10;ZZ.  | ...  &#10;.ZZ  | ...  &#10;&#10;step=3, rand=0, actions=&lt;RotateRight&gt;&#10;Want | Got ✗&#10;------------&#10;.Z.  | ...  &#10;ZZ.  | ...  &#10;Z..  | ...  &#10;&#10;" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: didPass was false
+Hint: Check Readme.md for how pieces should rotate
+--------------------------------------------------------------------------------
+This is what went wrong:
+
+step=0, rand=6, actions=&lt;&gt;
+Want | Got ✗
+------------
+ZZ.  | ...  
+.ZZ  | ...  
+...  | ...  
+
+step=1, rand=1, actions=&lt;RotateRight&gt;
+Want | Got ✗
+------------
+..Z  | ...  
+.ZZ  | ...  
+.Z.  | ...  
+
+step=2, rand=0, actions=&lt;RotateRight&gt;
+Want | Got ✗
+------------
+...  | ...  
+ZZ.  | ...  
+.ZZ  | ...  
+
+step=3, rand=0, actions=&lt;RotateRight&gt;
+Want | Got ✗
+------------
+.Z.  | ...  
+ZZ.  | ...  
+Z..  | ...  
+
+
+	at app//org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:530)
+	at app//org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:529)
+	at app//org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
+	at app//org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:503)
+	at app//generic.GameTestSuite.checkGame(GameTestSuite.scala:298)
+	at app//tetris.TetrisTestSuiteBase.checkGame(TetrisTestSuiteBase.scala:103)
+	at app//tetris.RotationTests.$anonfun$new$7(RotationTests.scala:152)
+	at app//scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at app//infrastructure.TestBase.$anonfun$test$1(TestBase.scala:36)
+	at app//org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at app//org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+	at app//org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:22)
+	at app//org.scalatest.Transformer.apply(Transformer.scala:20)
+	at app//org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+	at app//org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at app//org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+	at app//infrastructure.TestBase.org$scalatest$concurrent$TimeLimitedTests$$super$withFixture(TestBase.scala:9)
+	at app//org.scalatest.concurrent.TimeLimitedTests.$anonfun$withFixture$3(TimeLimitedTests.scala:154)
+	at app//org.scalatest.enablers.Timed$$anon$1.timeoutAfter(Timed.scala:127)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl(TimeLimits.scala:239)
+	at app//org.scalatest.concurrent.TimeLimits.failAfterImpl$(TimeLimits.scala:233)
+	at app//org.scalatest.concurrent.TimeLimits$.failAfterImpl(TimeLimits.scala:305)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture(TimeLimitedTests.scala:153)
+	at app//org.scalatest.concurrent.TimeLimitedTests.withFixture$(TimeLimitedTests.scala:150)
+	at app//infrastructure.TestBase.withFixture(TestBase.scala:9)
+	at app//org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
+	at app//org.scalatest.SuperEngine.runTestImpl(Engine.scala:286)
+	at app//org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
+	at app//org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
+	at app//org.scalatest.FunSuite.runTest(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
+	at app//org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:393)
+	at app//scala.collection.immutable.List.foreach(List.scala:334)
+	at app//org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:381)
+	at app//org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:376)
+	at app//org.scalatest.SuperEngine.runTestsImpl(Engine.scala:458)
+	at app//org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
+	at app//org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
+	at app//org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
+	at app//org.scalatest.Suite.run(Suite.scala:1124)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
+	at app//org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
+	at app//org.scalatest.SuperEngine.runImpl(Engine.scala:518)
+	at app//org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
+	at app//org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
+	at app//infrastructure.TestBase.run(TestBase.scala:26)
+	at app//org.scalatest.Suite.callExecuteOnSuite$1(Suite.scala:1187)
+	at app//org.scalatest.Suite.$anonfun$runNestedSuites$1(Suite.scala:1234)
+	at app//scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1323)
+	at app//org.scalatest.Suite.runNestedSuites(Suite.scala:1232)
+	at app//org.scalatest.Suite.runNestedSuites$(Suite.scala:1166)
+	at app//org.scalatest.Suites.runNestedSuites(Suites.scala:56)
+	at app//org.scalatest.Suite.run(Suite.scala:1121)
+	at app//org.scalatest.Suite.run$(Suite.scala:1106)
+	at app//tetris.TetrisTestSuitesBase.runDirect(TetrisTestSuitesBase.scala:20)
+	at app//tetris.TetrisTestSuitesBase.runWithScoreCounter(TetrisTestSuitesBase.scala:14)
+	at app//tetris.TetrisTestSuite3_1.run(TetrisTestSuite3_1.scala:17)
+	at app//org.scalatestplus.junit.JUnitRunner.run(JUnitRunner.scala:99)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+	at java.base@23/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@23/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

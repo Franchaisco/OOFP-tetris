@@ -45,6 +45,11 @@ class TetrisLogic(val randomGen: RandomGenerator,
 
 }
 
+case class Frame()
+{
+
+}
+
 object TetrisLogic {
 
   val FramesPerSecond: Int = 5 // change this to speed up or slow down the game
