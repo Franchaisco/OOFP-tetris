@@ -18,39 +18,71 @@ class TetrisLogic(val randomGen: RandomGenerator,
   def this() =
     this(new ScalaRandomGen(), DefaultDims, makeEmptyBoard(DefaultDims))
 
-  private val initialTetromino : Tetromino = TetrominoI()
-  private val initialFrame : Frame = Frame(initialTetromino, initialTetromino.tetroParts)
-  var frameList : List[Frame] = List[Frame](initialFrame)
+  private val tetrominoList =
+    List[Tetromino](TetrominoI(gridDims.width), TetrominoJ(gridDims.width), TetrominoL(gridDims.width),
+      TetrominoO(gridDims.width), TetrominoS(gridDims.width), TetrominoT(gridDims.width),
+      TetrominoZ(gridDims.width))
+  private val initialTetromino: Tetromino = generateTetromino()
+  private val initialFrame: Frame = Frame(initialTetromino, initialTetromino.tetroParts)
+  private var frameList: List[Frame] = List[Frame](initialFrame)
 
-  def setCurFrame() : Frame = {
+  private def setCurFrame() : Frame = {
     frameList.head
   }
 
-  // TODO implement me
-  def rotateLeft(): Unit = ()
+  def rotateLeft(): Unit = {
+    val curFrame = setCurFrame()
+    val anchorPoint = getAnchorPoint
+    val newTetroParts = curFrame.curTetromino.rotateLeft(curFrame.tetroParts, anchorPoint)
+    val newFrame = Frame(curFrame.curTetromino, newTetroParts)
+    frameList = newFrame :: frameList
+  }
+  private def getAnchorPoint: Point = {
+    val curParts = setCurFrame().tetroParts
+
+    curParts(1)
+  }
+
+  def rotateRight(): Unit = {
+    val curFrame = setCurFrame()
+    val anchorPoint = getAnchorPoint
+    val newTetroParts = curFrame.curTetromino.rotateRight(curFrame.tetroParts, anchorPoint)
+    val newFrame = Frame(curFrame.curTetromino, newTetroParts)
+    frameList = newFrame :: frameList
+  }
 
   // TODO implement me
-  def rotateRight(): Unit = ()
+  def moveLeft(): Unit = {
+    val curFrame = setCurFrame()
+    val newTetroParts = createNewParts(curFrame.tetroParts, Point(-1, 0))
+    val newFrame = Frame(curFrame.curTetromino, newTetroParts)
+    frameList = newFrame :: frameList
+  }
+
+  private def generateTetromino() : Tetromino = {
+    tetrominoList(randomGen.randomInt(tetrominoList.length))
+  }
 
   // TODO implement me
-  def moveLeft(): Unit = ()
+  def moveRight(): Unit = {
+    val curFrame = setCurFrame()
+    val newTetroParts = createNewParts(curFrame.tetroParts, Point(1, 0))
+    val newFrame = Frame(curFrame.curTetromino, newTetroParts)
+    frameList = newFrame :: frameList
+  }
 
-  // TODO implement me
-  def moveRight(): Unit = ()
-
-//  def createNewParts(tetroParts : List[Point]) : List[Point] = {
-//      for(i <- tetroParts){
-//          newTetroParts = Point(i.x, i.y + 1) :: newTetroParts
-//        }
-//      }
+  private def createNewParts(tetroParts : List[Point], toPoint : Point) : List[Point] = {
+    var newTetroParts = List[Point]()
+    for(i <- tetroParts){
+      newTetroParts = Point(i.x + toPoint.x, i.y + toPoint.y) :: newTetroParts
+    }
+    newTetroParts
+  }
 
   // TODO implement me
   def moveDown(): Unit = {
     val curFrame = setCurFrame()
-    var newTetroParts = List[Point]() //make setFunction createNewParts(curframe.tetroParts)
-    for(i <- curFrame.tetroParts){
-      newTetroParts = Point(i.x, i.y + 1) :: newTetroParts
-    }
+    val newTetroParts = createNewParts(curFrame.tetroParts, Point(0, 1))
     val newFrame = Frame(curFrame.curTetromino, newTetroParts)
     frameList = newFrame :: frameList
   }
@@ -61,14 +93,24 @@ class TetrisLogic(val randomGen: RandomGenerator,
   // TODO implement me
   def isGameOver: Boolean = false
 
+  private def getTetromino: CellType = {
+    setCurFrame().curTetromino match  {
+      case TetrominoI(gridDims.width) => ICell
+      case TetrominoJ(gridDims.width) => JCell
+      case TetrominoL(gridDims.width) => LCell
+      case TetrominoO(gridDims.width) => OCell
+      case TetrominoS(gridDims.width) => SCell
+      case TetrominoT(gridDims.width) => TCell
+      case TetrominoZ(gridDims.width) => ZCell
+    }
+  }
+
   // TODO implement me
   def getCellType(p : Point): CellType =
   {
     if(setCurFrame().tetroParts.contains(p))
       {
-          setCurFrame().curTetromino match  {
-            case TetrominoI() => ICell
-        }
+          getTetromino
       }
     else
       {
